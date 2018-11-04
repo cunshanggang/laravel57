@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('hello', function () {
+    return 'Hello, Welcome to LaravelAcademy.org';
+});
+
+Route::get('/user', 'UsersController@index');
+//留言
+Route::get('/message', 'MessagesController@index');
