@@ -22,3 +22,5 @@ Route::get('hello', function () {
 Route::get('/user', 'UsersController@index');
 //留言
 Route::get('/message', 'MessagesController@index');
+//添加留言
+Route::post('/message/add', 'MessagesController@add');

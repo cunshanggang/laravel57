@@ -1,6 +1,7 @@
 <?php
 namespace App\Http\Controllers;
 
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -13,8 +14,14 @@ class MessagesController extends BaseController
 
     public function index()
     {
-        $data['content'] = '你好！姚明';
-        $message = Message::insert($data);
-        dd($message);
-}
+        return view('message.index');
+
+    }
+
+    //添加留言
+    public function add()
+    {
+        $content = request()->all();
+        dd($content);
+    }
 }
